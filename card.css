@@ -1,0 +1,43 @@
+.card-container{
+    perspective: 800px;
+   
+}
+
+.card{
+    width: 150px;
+    height: 200px;
+    margin: 10% 35%;
+    transform-style: preserve-3d ;
+    -webkit-transform: ;
+    -moz-transform: ;
+    -ms-transform: ;
+    -o-transform: ;
+    position: relative;
+    transition: transform .75s;
+    -webkit-transition: transform .75s;
+    -moz-transition: transform .75s;
+    -ms-transition: transform .75s;
+    -o-transition: transform .75s
+    cubic-bezier(0.4, 0.03, 0.5, 0.9);
+}
+
+.card__image{
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    inset: 0;
+    object-fit: cover;
+    outline: 2px solid #fff;
+    outline-offset: 5px;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.card__image:nth-child(2),
+.card:hover{
+    transform: rotate3d(1,1,0, 180deg);
+    -webkit-transform: rotate3d(1,1,0, 180deg);
+    -moz-transform: rotate3d(1,1,0, 180deg);
+    -ms-transform: rotate3d(1,1,0, 180deg);
+    -o-transform: rotate3d(1,1,0, 180deg);
+}
